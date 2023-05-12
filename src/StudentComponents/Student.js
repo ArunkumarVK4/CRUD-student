@@ -22,17 +22,17 @@ import AppPro from "../UseContext/AppProvider";
   function deleteStudent(index) {
     swal({
       title: "Are you sure?",
-      text: "You will not be able to recover this imaginary file!",
+      text: "You will not be able to recover this Data!",
       icon: "warning",
       buttons: true,
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        swal("Deleted!", "Your imaginary file has been deleted.", "success");
+        swal("Deleted!", "Your Data has been deleted.", "success");
         const remainingStudent = students.filter((e, idx) => idx !== index);
         setStudents(remainingStudent);
       } else {
-        swal("Your imaginary file is safe!");
+        swal("Your Data is safe!");
       }
     });
   }
